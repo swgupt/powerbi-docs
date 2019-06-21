@@ -50,7 +50,6 @@ Power BI service administrators and Office 365 Global Administrators can modify 
 - Add or remove Capacity Admins.
 - Add or remove users that have assignment permissions.
 - Add or remove additional workloads.
-- Change regions.
 
 Assignment permissions are required to assign a workspace to a specific Premium capacity. The permissions can be granted to the entire organization, specific users, or groups.
 
@@ -58,7 +57,9 @@ By default, Premium capacities support workloads associated with running Power B
 
 Memory is dynamically allocated to dataflows, but is statically allocated to paginated reports. The reason for statically allocating the maximum memory is that paginated reports run within a secured contained space of the capacity. Care should be taken when setting paginated reports memory as it reduces available memory for loading models. To learn more, see the [Default memory settings](service-admin-premium-workloads.md#default-memory-settings).
 
-Deleting a Premium capacity is possible and won't result in the deletion of its workspaces and content. Instead, it moves any assigned workspaces to shared capacity. When the Premium capacity was created in a different region, the workspace is moved to shared capacity of the home region.
+Deleting a Premium capacity is possible and won't result in the deletion of its workspaces and content. Instead, it moves any assigned workspaces to shared capacity. When the Premium capacity was created in a different region, the workspace is moved to shared capacity of the home region. 
+
+Target region of the capacity cannot be changed. A new capacity has to be created at the desired region and the workspaces need to be manually moved.
 
 ### Assigning workspaces to capacities
 
